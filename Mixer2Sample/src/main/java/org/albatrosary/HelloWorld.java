@@ -14,7 +14,10 @@ public class HelloWorld {
 	 */
 	public static void main(String[] args) throws Exception {
         Mixer2Engine m2e = new Mixer2Engine();
-        Html html = m2e.loadHtmlTemplate(new File("D:\\albatorosary-workspace\\Mixer2\\bin\\HelloWorld.html"));
+        
+        File f = null;
+        
+        Html html = m2e.loadHtmlTemplate(f);
         html.getById("hellomsg",Div.class).getContent().clear();
         html.getById("hellomsg",Div.class).getContent().add("Hello World !");
         System.out.println(m2e.saveToString(html));
