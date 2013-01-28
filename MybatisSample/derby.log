@@ -1,0 +1,11 @@
+----------------------------------------------------------------
+Wed Nov 14 10:18:41 JST 2012:
+ Derby バージョン The Apache Software Foundation - Apache Derby - 10.8.2.2 - (1181258): インスタンス a816c00e-013a-fc7f-2446-000000c4f800 を
+クラスローダー sun.misc.Launcher$AppClassLoader@80d1ff によってデータベースディレクトリ D:\MASTER1  上でブート中 
+
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_09-b05
+user.dir=D:\axawork\sample-client
+derby.system.home=null
+データベースクラスローダーが開始されました - derby.database.classpath=''

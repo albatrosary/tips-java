@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+BloggerMapper のような Mapper クラスなら、
+実は XML を使う必要はありません。 
+代わりに、Java アノテーションを使って下記のように Mapped Statement を記述することができます。
+
+package org.mybatis.example;
+public interface BlogMapper {
+  @Select("SELECT * FROM blog WHERE id = #{id}")
+  Blog selectBlog(int id);
+}
+
+アノテーションを使うと単純な SQL 文をスッキリ書くことができますが、
+複雑な SQL 文をアノテーションを使って書こうとすると可読性が落ちますし、
+アノテーション固有の制限もありますので、
+複雑な Mapped Statement を扱わなくてはならない場合には XML を使うことをお勧めします。
+
+残念ながら、アノテーションの表現力と柔軟性には制限があります。
+調査や試行錯誤に多くの時間を費やしたにも関わらず、
+複雑なマッピングをアノテーションで実現することはできません。
+（例えば）C# の Attributes にはこのような制限が無いので、
+MyBatis.NET では XML の代わりに Attributes を活用することができます。
+とは言っても、Java のアノテーションにも利点が無いわけではありません。
+-->
+<mapper namespace="org.albatrosary.data.mapper.RVTBKXMapper">
+  <select id="selectRVTBKX" parameterType="String" resultType="org.albatrosary.RVTBKX">
+    select RVKX_SEI_NK from RVTBKX where RVKX_SEI_NM = #{rvkx_sei_nm}
+  </select>
+</mapper>
